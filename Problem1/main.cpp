@@ -7,10 +7,7 @@
 
 int main() {
 
-
-    //Rotate around the dial from 0-99 and if we go left we subtract
-    //and wrap around, if we go right we add and wrap around
-    //count the number of times we land on zero
+    //While rotating, if we pass 0 at all, increment the counter
 
     std::ifstream input("../../Problem1/input.txt");
     int currentRotation = 50;
@@ -33,11 +30,12 @@ int main() {
         currentRotation += rawInput[0] == 'R' ? +value : -value;
 
         //Pass into modulus function
-        currentRotation = Modulo(currentRotation, 100);
-        currentRotation = std::abs(currentRotation);
+        auto result = Modulo(currentRotation, 100);
 
-        if (currentRotation == 0)
-            numberOfZeros++;
+        //Get modulated result and times it past zero
+        currentRotation = result.first;
+        numberOfZeros += result.second;
+        currentRotation = std::abs(currentRotation);
     }
 
     input.close();
@@ -45,6 +43,14 @@ int main() {
 }
 
 ///Takes in a number and constraints it from 0-maxNum
-int Modulo(int currentNum, int maxNum) {
-    return (currentNum % maxNum + maxNum) % maxNum;
+std::pair<int,int> Modulo(int currentNum, int maxNum) {
+    int moduloValue = (currentNum % maxNum + maxNum) % maxNum;
+
+    //Get differential between current num and modulo value
+    int differential = std::abs(currentNum - moduloValue);
+
+    //Divide differential by 100
+    differential /= 100;
+
+    return std::pair<int,int>(moduloValue, differential);
 }

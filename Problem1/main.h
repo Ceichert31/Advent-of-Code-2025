@@ -7,6 +7,6 @@
 #include <iostream>
 #include <fstream>
 
-int Modulo(int currentNum, int maxNum);
+std::pair<int,int> Modulo(int currentNum, int maxNum);
 
 #endif //MAIN_H
