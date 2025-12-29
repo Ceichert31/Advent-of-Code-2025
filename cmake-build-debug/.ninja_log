@@ -1,3 +1,9 @@
 # ninja log v6
-4	354	7863120683992629	CMakeFiles/Advent_of_Code_2025.dir/main.cpp.obj	e3c036a542a01105
-356	492	7863120687508757	Advent_of_Code_2025.exe	4ead1a125c900882
+50	537	7887282581433864	CMakeFiles/Advent_of_Code_2025.dir/main.cpp.obj	e3c036a542a01105
+62	538	7887282581557917	CMakeFiles/Advent_of_Code_2025.dir/Problem1/main.cpp.obj	1032289688585165
+34	491	7887283352627572	CMakeFiles/Problem1.dir/Problem1/main.cpp.obj	c7318e5efd6b1551
+538	633	7887282586316760	Advent_of_Code_2025.exe	5ab04ccc639b6c9d
+22	397	7887290496650930	Problem1/CMakeFiles/problem1.dir/main.cpp.obj	5ad75c9f2ee5522e
+397	472	7887290500401697	Problem1/problem1.exe	b273a38ea5ffe501
+27	714	7887290732568773	Problem1/CMakeFiles/problem1.dir/main.cpp.obj	5ad75c9f2ee5522e
+715	779	7887290739440285	Problem1/problem1.exe	4eb7e3d9e495933

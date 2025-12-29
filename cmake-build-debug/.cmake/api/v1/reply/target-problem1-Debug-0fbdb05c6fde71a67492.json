@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Advent_of_Code_2025.exe"
+			"path" : "Problem1/problem1.exe"
 		},
 		{
-			"path" : "Advent_of_Code_2025.pdb"
+			"path" : "Problem1/problem1.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -17,7 +17,7 @@
 		],
 		"files" : 
 		[
-			"CMakeLists.txt"
+			"Problem1/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -27,7 +27,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 6,
+				"line" : 3,
 				"parent" : 0
 			}
 		]
@@ -52,12 +52,11 @@
 			},
 			"sourceIndexes" : 
 			[
-				0,
-				1
+				0
 			]
 		}
 	],
-	"id" : "Advent_of_Code_2025::@6890427a1f51a3e7e1df",
+	"id" : "problem1::@d427025e5ee000621b31",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -77,12 +76,12 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "Advent_of_Code_2025",
-	"nameOnDisk" : "Advent_of_Code_2025.exe",
+	"name" : "problem1",
+	"nameOnDisk" : "problem1.exe",
 	"paths" : 
 	{
-		"build" : ".",
-		"source" : "."
+		"build" : "Problem1",
+		"source" : "Problem1"
 	},
 	"sourceGroups" : 
 	[
@@ -90,15 +89,7 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0,
-				1
-			]
-		},
-		{
-			"name" : "Header Files",
-			"sourceIndexes" : 
-			[
-				2
+				0
 			]
 		}
 	],
@@ -107,19 +98,8 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "main.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
 			"path" : "Problem1/main.cpp",
 			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "Problem1/main.h",
-			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

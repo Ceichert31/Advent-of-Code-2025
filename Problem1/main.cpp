@@ -4,5 +4,9 @@
 
 #include "main.h"
 
-namespace Problem1 {
-} // Problem1
+int main() {
+
+
+
+    return 0;
+}
