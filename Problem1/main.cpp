@@ -31,9 +31,11 @@ int main() {
 
         //Add value if it starts with R, otherwise subtract value
         currentRotation += rawInput[0] == 'R' ? +value : -value;
+
+        if (currentRotation == 0)
+            numberOfZeros++;
     }
-
-
+    
     input.close();
-    return 0;
+    return numberOfZeros;
 }
