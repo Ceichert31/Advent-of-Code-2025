@@ -32,10 +32,19 @@ int main() {
         //Add value if it starts with R, otherwise subtract value
         currentRotation += rawInput[0] == 'R' ? +value : -value;
 
+        //Pass into modulus function
+        currentRotation = Modulo(currentRotation, 100);
+        currentRotation = std::abs(currentRotation);
+
         if (currentRotation == 0)
             numberOfZeros++;
     }
-    
+
     input.close();
     return numberOfZeros;
+}
+
+///Takes in a number and constraints it from 0-maxNum
+int Modulo(int currentNum, int maxNum) {
+    return (currentNum % maxNum + maxNum) % maxNum;
 }

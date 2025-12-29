@@ -7,12 +7,6 @@
 #include <iostream>
 #include <fstream>
 
-namespace Problem1 {
-
-class main {
-
-};
-
-} // Problem1
+int Modulo(int currentNum, int maxNum);
 
 #endif //MAIN_H
