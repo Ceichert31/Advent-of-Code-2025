@@ -12,7 +12,7 @@ int main() {
     std::ifstream input("../../Problem1/input.txt");
     int currentRotation = 50;
     int numberOfZeros = 0;
-
+    
     if (!input.is_open()) {
         return -1;
     }
@@ -26,16 +26,17 @@ int main() {
         //parse input
         int value = std::stoi(rawInput.substr(1, rawInput.size() - 1));
 
+        int start = currentRotation;
+
         //Add value if it starts with R, otherwise subtract value
         currentRotation += rawInput[0] == 'R' ? +value : -value;
 
         //Pass into modulus function
-        auto result = Modulo(currentRotation, 100);
+        auto result = Modulo(start, currentRotation, 100);
 
         //Get modulated result and times it past zero
         currentRotation = result.first;
         numberOfZeros += result.second;
-        currentRotation = std::abs(currentRotation);
     }
 
     input.close();
@@ -43,14 +44,21 @@ int main() {
 }
 
 ///Takes in a number and constraints it from 0-maxNum
-std::pair<int,int> Modulo(int currentNum, int maxNum) {
+std::pair<int,int> Modulo(int start, int currentNum, int maxNum) {
     int moduloValue = (currentNum % maxNum + maxNum) % maxNum;
+    int differential = 0;
 
-    //Get differential between current num and modulo value
-    int differential = std::abs(currentNum - moduloValue);
+    if (start != 0) {
+        //Get differential between current num and modulo value
+        differential = std::abs(currentNum - moduloValue);
 
-    //Divide differential by 100
-    differential /= 100;
+        //Divide differential by 100 to get number of times it has past 0
+        differential /= 100;
+    }
+
+    if (currentNum == 0) {
+        differential++;
+    }
 
     return std::pair<int,int>(moduloValue, differential);
 }
